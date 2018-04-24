@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pwa</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if(navigator.serviceWorker!=null){
+            navigator.serviceWorker.register('sw.js')
+                .then(function (value) {
+                    console.log( value)
+                    console.log('Registered events at scope: ', value.scope)
+                })
+        }
+    </script>
+
+</head>
+<body>
+    <h3>revision 1</h3>
+    <div>mini PWA ,open console for more</div>
+</body>
+</html>
