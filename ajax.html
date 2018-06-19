@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+    <div id="myDiv"><h2>Let AJAX change this text</h2></div>
+    <button id="b01" type="button">Change Content</button>
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        var data = {
+        password: '123456',
+        loginName:'admin'
+    }
+        $("#b01").click(function(){
+            $.ajax({  
+                type : 'post',  
+                url : 'http://localhost:8051/sys/account/login',  
+                data: data,  
+                async : false, //同步方式  
+                success : function(data) {  
+                    console.log(data) 
+                }  
+                });  
+
+        // htmlobj=$.ajax({url:"http://localhost:8051/sys/account/login",async:false});
+        // $("#myDiv").html(htmlobj.responseText);
+        });
+        });
+</script>
+</html>
