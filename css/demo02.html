@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>animation</title>
+
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 15px solid black;
+            animation: changebox 1s ease-in-out 1s infinite alternate;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes changebox {
+            10% {
+                background: aquamarine;
+            }
+            50% {
+                width: 150px;
+                border-radius: 50%;
+            }
+            70% {
+                border: 15px solid yellow;
+            }
+            100% {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>
