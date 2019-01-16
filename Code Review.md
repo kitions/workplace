@@ -60,27 +60,26 @@
        b/                     			--> 页面开发主目录
            client/           			
            |    common/             	--> 通用ts
-   		|	 |	common.ts
-   		|	 |	...
+   		   |	 |	common.ts
+   		   |	 |	...
            |    components/            --> 组件
-   		|	 |	info_list/
-   		|	 |		info_list.html
-   		|	 |		info_list.scss
-   		|	 |		info_list.ts
-   		|	 |	...
-           |    declare/           	--> ts声明文件
+   		   |	 |	info_list/
+   		   |	 |		info_list.html
+   		   |	 |		info_list.scss
+   		   |	 |		info_list.ts
+   		   |	 |	...
+           |    declare/           		--> ts声明文件
            |    lib/            		--> ts公共基础方法
-   		|	 |	
            |    pages/            		--> 页面
            |	 |	index/
-   		|	 |		index.html
-   		|	 |		index.scss
-   		|	 |		index.ts
-   		|	 |	...
-   		|	 tsconfig.json
+   		   |	 |		index.html
+   		   |	 |		index.scss
+   		   |	 |		index.ts
+   		   |	 |	...
+   		   |	 tsconfig.json
            node_modules/             	--> 依赖包
            static/          			--> 静态文件
-   		|	release/
+   		   |	release/
            |	images/
            |	fonts/
            templates/               	--> gulp生成的模板
@@ -88,28 +87,28 @@
            default.cfg                 --> go配置文件
            gulpfile.js                 --> gulp配置文件
            package.json 				
-           main.go                 	--> go主函数
+           main.go                 		--> go主函数
            router.go                 	--> go主路由
            run.sh                	 	--> 项目启动脚本
        config/                        	--> go配置文件
-   		config.go
+   		   config.go
        handler/                        --> golang 开发主目录
-       	api/						--> 开放给前台的api
-       		AjaxUserInfo.go
-       		...
-       	container/					--> container
-       		UserInfo.go				--> 包含之前的handler，service，model
-       		...
-       	render.go					--> c.Html()渲染函数
+       	   api/							--> 开放给前台的api
+       		   AjaxUserInfo.go
+       		   ...
+       	   container/					--> container
+       		   UserInfo.go				--> 包含之前的handler，service，model
+       		   ...
+       	   render.go					--> c.Html()渲染函数
        helper/                        	-->	container机制的基础包
-   		api.go
-   		cache.go
-   		const.go
-   		container.go
-   		parallel.go
-   		protocol.go
+   			api.go
+   			cache.go
+   			const.go
+   			container.go
+   			parallel.go
+   			protocol.go
        model/                    		--> 目前将分页器放在model
-   		page.go
+   			page.go
        utils/                      	--> 工具集合文件夹
    
    ```

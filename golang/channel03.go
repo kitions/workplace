@@ -34,3 +34,6 @@ func main() {
 	go squarer(squares, naturals)
 	printer(squares)
 }
+//调用counter(naturals)将导致将chan int类型的naturals隐式地转换为chan<- int类型只发送型的channel。
+//调用printer(squares)也会导致相似的隐式转换，这一次是转换为<-chan int类型只接收型的channel。
+//任何双向channel向单向channel变量的赋值操作都将导致该隐式转换。这里并没有反向转换的语法：也就是不能一个将类似chan<- int类型的单向型的channel转换为chan int类型的双向型的channel。
