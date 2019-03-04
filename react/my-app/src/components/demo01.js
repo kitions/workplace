@@ -20,7 +20,20 @@ class UserList extends Component {
         )
     }
 }
-  
+
+class Card extends Component {
+    render () {
+      return (
+        <div className='card'>
+          <div className='card-content'>
+            {this.props.children}
+            {console.log(this.props.children)}
+          </div>
+        </div>
+      )
+    }
+  }
+
 class Header1 extends Component {
     static defaultProps = {
         avc : "aaa"
@@ -35,14 +48,7 @@ class Header1 extends Component {
         return(
             <div>
                 <h1 onClick = {this.handler.bind(this)}>测试</h1>
-                {/* {users.map((user,i)=>
-                      <div  key={i}>
-                        <div >姓名：{user.username}</div>
-                        <div >年龄：{user.age}</div>
-                        <div >性别：{user.gender}</div>
-                        <hr />
-                    </div>
-                )} */}
+
                 {users.map((user,i) => 
                     <UserList user = {user} key={i}/>
                 )}
@@ -75,11 +81,22 @@ class LikeButton extends Component{
 }
 
 class Demo01 extends Component {
-
+    componentDidMount () {
+        console.log(this.input)
+        this.input.focus()
+      }
     render() {
 
         return (
             <div>
+                <Card>
+                    <div>
+                        <h2>React.js</h2>
+                        <div>开源、免费、专业、简单</div>
+                        订阅：<input />
+                    </div>
+                 </Card>,
+                <input ref={(asd) => this.input = asd} />
                 <LikeButton/>
                 <Header1/>
                 <div className = "c1"
